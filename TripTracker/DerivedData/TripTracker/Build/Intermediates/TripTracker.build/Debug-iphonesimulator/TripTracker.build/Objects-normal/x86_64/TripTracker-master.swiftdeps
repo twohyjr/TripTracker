@@ -1,0 +1,6 @@
+version: "Apple Swift version 2.1.1 (swiftlang-700.1.101.15 clang-700.1.81)"
+options: "b0284918b3f4da7c8550c7c56a46301d"
+build_time: [505543549, 489528000]
+inputs:
+  "/Users/twohyjr/Documents/Projects/TripTracker/TripTracker/TripTracker/ViewController.swift": [505543547, 0]
+  "/Users/twohyjr/Documents/Projects/TripTracker/TripTracker/TripTracker/AppDelegate.swift": [505543547, 0]

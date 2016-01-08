@@ -1,0 +1,76 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Trip"
+provides-nominal:
+- "C11TripTracker4Trip"
+provides-member:
+- ["C11TripTracker4Trip", ""]
+provides-dynamic-lookup:
+- "id"
+- "name"
+depends-top-level:
+- "Int"
+- "Trip"
+- "NSObject"
+- "StringLiteralType"
+- "String"
+depends-member:
+- ["PSs9AnyObject", "id"]
+- ["PSs9AnyObject", "init"]
+- ["PSs9AnyObject", "name"]
+- ["PSs9AnyObject", ""]
+- ["PSs11CVarArgType", "id"]
+- ["PSs11CVarArgType", "init"]
+- ["PSs11CVarArgType", "name"]
+- ["PSs11CVarArgType", ""]
+- ["PSs23CustomStringConvertible", "id"]
+- ["PSs23CustomStringConvertible", "init"]
+- ["PSs23CustomStringConvertible", "name"]
+- ["PSs23CustomStringConvertible", ""]
+- ["PSs9Equatable", "id"]
+- ["PSs9Equatable", "init"]
+- ["PSs9Equatable", "name"]
+- ["PSs9Equatable", ""]
+- ["PSs8Hashable", "id"]
+- ["PSs8Hashable", "init"]
+- ["PSs8Hashable", "name"]
+- ["PSs8Hashable", ""]
+- ["CSo8NSObject", "Int"]
+- ["CSo8NSObject", "String"]
+- ["CSo8NSObject", "id"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "name"]
+- ["CSo8NSObject", ""]
+- ["PSo16NSObjectProtocol", "id"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "name"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["VSs12StaticString", "deinit"]
+- ["C11TripTracker4Trip", "Int"]
+- ["C11TripTracker4Trip", "String"]
+- ["C11TripTracker4Trip", "deinit"]
+- ["C11TripTracker4Trip", "id"]
+- ["C11TripTracker4Trip", "init"]
+- ["C11TripTracker4Trip", "name"]
+depends-nominal:
+- "PSs9AnyObject"
+- "PSs11CVarArgType"
+- "PSs23CustomStringConvertible"
+- "PSs9Equatable"
+- "PSs8Hashable"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "VSs12StaticString"
+- "C11TripTracker4Trip"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreData.swiftmodule"
+interface-hash: "633ab0372373ebb8730d1e1d6603393c"
