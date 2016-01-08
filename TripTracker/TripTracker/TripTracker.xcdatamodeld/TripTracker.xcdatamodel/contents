@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="14F1021" minimumToolsVersion="Automatic">
+    <entity name="GasEntries" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="gasPrice" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="gasStation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="odometer" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="totalGallons" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="totalPrice" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="tripName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Stations" syncable="YES">
         <attribute name="stationId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="stationName" optional="YES" attributeType="String" syncable="YES"/>
@@ -9,7 +18,8 @@
         <attribute name="tripName" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Trips" positionX="-54" positionY="-9" width="128" height="75"/>
         <element name="Stations" positionX="-36" positionY="27" width="128" height="75"/>
+        <element name="Trips" positionX="-54" positionY="-9" width="128" height="75"/>
+        <element name="GasEntries" positionX="-45" positionY="27" width="128" height="150"/>
     </elements>
 </model>

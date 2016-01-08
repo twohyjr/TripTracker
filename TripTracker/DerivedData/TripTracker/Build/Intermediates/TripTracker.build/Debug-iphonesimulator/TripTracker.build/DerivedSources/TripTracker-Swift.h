@@ -173,12 +173,50 @@ SWIFT_CLASS("_TtC11TripTracker19EnterViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class NSDate;
+
+SWIFT_CLASS("_TtC11TripTracker8GasEntry")
+@interface GasEntry : NSObject
+@property (nonatomic, copy) NSString * __nonnull name;
+@property (nonatomic, copy) NSString * __nonnull station;
+@property (nonatomic) double odom;
+@property (nonatomic) double gasprice;
+@property (nonatomic) double totalgallons;
+@property (nonatomic) double totalprice;
+@property (nonatomic, strong) NSDate * __nonnull date;
+- (nonnull instancetype)initWithDate:(NSDate * __nonnull)date OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 SWIFT_CLASS("_TtC11TripTracker7Station")
 @interface Station : NSObject
 @property (nonatomic, copy) NSString * __nonnull name;
 @property (nonatomic) NSInteger id;
 - (nonnull instancetype)initWithName:(NSString * __nonnull)name id:(NSInteger)id OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC11TripTracker24StatisticsViewController")
+@interface StatisticsViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UILabel * __null_unspecified totalMilesTravelled;
+@property (nonatomic, weak) IBOutlet UILabel * __null_unspecified totalGallonsUsed;
+@property (nonatomic, weak) IBOutlet UILabel * __null_unspecified mostFrequentedStations;
+@property (nonatomic, weak) IBOutlet UILabel * __null_unspecified averagePrice;
+@property (nonatomic, weak) IBOutlet UILabel * __null_unspecified averageMPG;
+@property (nonatomic, weak) IBOutlet UILabel * __null_unspecified averageMiles;
+@property (nonatomic, weak) IBOutlet UILabel * __null_unspecified totalAmountPaid;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (double)getTotalMilesTraveled:(NSArray<GasEntry *> * __nonnull)gasArray;
+- (double)getTotalGallonsUsed:(NSArray<GasEntry *> * __nonnull)gasArray;
+- (NSString * __nonnull)getMostFrequentedStations:(NSArray<GasEntry *> * __nonnull)gasArray;
+- (double)getAveragePrice:(NSArray<GasEntry *> * __nonnull)gasArray;
+- (double)getAverageMPG:(NSArray<GasEntry *> * __nonnull)gasArray;
+- (double)getAverageMiles:(NSArray<GasEntry *> * __nonnull)gasArray;
+- (double)getTotalAmountPaid:(NSArray<GasEntry *> * __nonnull)gasArray;
+- (NSArray<GasEntry *> * __nonnull)FetchData;
+- (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
