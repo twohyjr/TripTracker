@@ -2,7 +2,7 @@ import Foundation
 
 class GasEntry: NSObject {
     
-    var name:String = ""
+    var tripname:String = ""
     var station:String = ""
     var odom:Double = 0.0
     var gasprice:Double = 0.0

@@ -9,52 +9,56 @@ provides-member:
 - ["C11TripTracker19EnterViewController", ""]
 - ["C11TripTracker14SharingManager", ""]
 provides-dynamic-lookup:
-- "didReceiveMemoryWarning"
-- "SubmitButtonPressed"
-- "pickerView"
-- "pickerView"
-- "AddStationButtonPressed"
-- "TripNamePickerView"
-- "FetchStationData"
-- "updateStationName"
-- "numberOfComponentsInPickerView"
-- "stations"
-- "AddTripButtonPressed"
-- "FetchTripData"
-- "SaveTripData"
-- "currentSelectedStation"
-- "StationNamePickerView"
 - "currentSelectedTrip"
-- "SaveStationData"
-- "updateTripName"
-- "trips"
+- "StationNamePickerView"
+- "pickerView"
+- "pickerView"
+- "updateStationName"
 - "viewDidLoad"
+- "didReceiveMemoryWarning"
+- "TripNamePickerView"
+- "numberOfComponentsInPickerView"
+- "AddTripButtonPressed"
+- "AddStationButtonPressed"
+- "deleteTripButtonPressed"
+- "deleteTripButtonPressed"
+- "SaveStationData"
+- "stations"
+- "updateTripName"
+- "FetchStationData"
+- "trips"
+- "SubmitButtonPressed"
+- "SaveTripData"
+- "deleteStationButtonPressed"
+- "deleteStationButtonPressed"
+- "currentSelectedStation"
+- "FetchTripData"
 depends-top-level:
-- "String"
-- "EnterViewController"
-- "StringLiteralType"
-- !private "print"
 - "SharingManager"
+- !private "NSManagedObject"
+- !private "UIAlertActionStyle"
 - "UIPickerView"
-- !private "NSFetchRequest"
-- !private "UIAlertController"
-- !private "UITextField"
+- "EnterViewController"
+- "UIViewController"
+- !private "print"
+- !private "NSEntityDescription"
+- "Int"
+- "StringLiteralType"
 - !private "~="
+- "String"
+- !private "UIAlertAction"
+- !private "NSManagedObjectContext"
+- !private "UIAlertController"
+- "Station"
+- !private "UITextField"
 - !private "UIApplication"
 - !private "AppDelegate"
-- "Trip"
-- !private "UIAlertActionStyle"
-- !private "NSManagedObjectContext"
-- !private "BooleanLiteralType"
-- "Station"
-- "Int"
-- !private "NSManagedObject"
-- "UIViewController"
-- "UIButton"
-- !private "NSEntityDescription"
-- !private ">"
-- !private "UIAlertAction"
+- !private "NSFetchRequest"
 - "UIBarButtonItem"
+- "Trip"
+- !private "BooleanLiteralType"
+- "UIButton"
+- !private ">"
 depends-member:
 - ["PSs9AnyObject", "AddStationButtonPressed"]
 - ["PSs9AnyObject", "AddTripButtonPressed"]
@@ -80,6 +84,8 @@ depends-member:
 - ["PSs9AnyObject", "currentSelectedStation"]
 - ["PSs9AnyObject", "currentSelectedTrip"]
 - !private ["PSs9AnyObject", "delegate"]
+- ["PSs9AnyObject", "deleteStationButtonPressed"]
+- ["PSs9AnyObject", "deleteTripButtonPressed"]
 - ["PSs9AnyObject", "didReceiveMemoryWarning"]
 - !private ["PSs9AnyObject", "executeFetchRequest"]
 - ["PSs9AnyObject", "init"]
@@ -161,6 +167,8 @@ depends-member:
 - ["PSs11CVarArgType", "currentSelectedStation"]
 - ["PSs11CVarArgType", "currentSelectedTrip"]
 - !private ["PSs11CVarArgType", "delegate"]
+- ["PSs11CVarArgType", "deleteStationButtonPressed"]
+- ["PSs11CVarArgType", "deleteTripButtonPressed"]
 - ["PSs11CVarArgType", "didReceiveMemoryWarning"]
 - !private ["PSs11CVarArgType", "executeFetchRequest"]
 - ["PSs11CVarArgType", "init"]
@@ -239,6 +247,8 @@ depends-member:
 - ["PSs23CustomStringConvertible", "currentSelectedStation"]
 - ["PSs23CustomStringConvertible", "currentSelectedTrip"]
 - !private ["PSs23CustomStringConvertible", "delegate"]
+- ["PSs23CustomStringConvertible", "deleteStationButtonPressed"]
+- ["PSs23CustomStringConvertible", "deleteTripButtonPressed"]
 - ["PSs23CustomStringConvertible", "didReceiveMemoryWarning"]
 - !private ["PSs23CustomStringConvertible", "executeFetchRequest"]
 - ["PSs23CustomStringConvertible", "init"]
@@ -296,6 +306,8 @@ depends-member:
 - ["C11TripTracker19EnterViewController", "currentSelectedStation"]
 - ["C11TripTracker19EnterViewController", "currentSelectedTrip"]
 - ["C11TripTracker19EnterViewController", "deinit"]
+- ["C11TripTracker19EnterViewController", "deleteStationButtonPressed"]
+- ["C11TripTracker19EnterViewController", "deleteTripButtonPressed"]
 - ["C11TripTracker19EnterViewController", "didReceiveMemoryWarning"]
 - ["C11TripTracker19EnterViewController", "init"]
 - ["C11TripTracker19EnterViewController", "numberOfComponentsInPickerView"]
@@ -310,6 +322,7 @@ depends-member:
 - ["PSs9Equatable", "AddStationButtonPressed"]
 - ["PSs9Equatable", "AddTripButtonPressed"]
 - !private ["PSs9Equatable", "Alert"]
+- !private ["PSs9Equatable", "Cancel"]
 - !private ["PSs9Equatable", "Default"]
 - !private ["PSs9Equatable", "Distance"]
 - ["PSs9Equatable", "FetchStationData"]
@@ -336,6 +349,8 @@ depends-member:
 - ["PSs9Equatable", "currentSelectedStation"]
 - ["PSs9Equatable", "currentSelectedTrip"]
 - !private ["PSs9Equatable", "delegate"]
+- ["PSs9Equatable", "deleteStationButtonPressed"]
+- ["PSs9Equatable", "deleteTripButtonPressed"]
 - ["PSs9Equatable", "didReceiveMemoryWarning"]
 - !private ["PSs9Equatable", "executeFetchRequest"]
 - ["PSs9Equatable", "init"]
@@ -368,6 +383,7 @@ depends-member:
 - ["PSs8Hashable", "AddStationButtonPressed"]
 - ["PSs8Hashable", "AddTripButtonPressed"]
 - !private ["PSs8Hashable", "Alert"]
+- !private ["PSs8Hashable", "Cancel"]
 - !private ["PSs8Hashable", "Default"]
 - !private ["PSs8Hashable", "Distance"]
 - ["PSs8Hashable", "FetchStationData"]
@@ -394,6 +410,8 @@ depends-member:
 - ["PSs8Hashable", "currentSelectedStation"]
 - ["PSs8Hashable", "currentSelectedTrip"]
 - !private ["PSs8Hashable", "delegate"]
+- ["PSs8Hashable", "deleteStationButtonPressed"]
+- ["PSs8Hashable", "deleteTripButtonPressed"]
 - ["PSs8Hashable", "didReceiveMemoryWarning"]
 - !private ["PSs8Hashable", "executeFetchRequest"]
 - ["PSs8Hashable", "init"]
@@ -487,6 +505,8 @@ depends-member:
 - !private ["PSo8NSCoding", "addTextFieldWithConfigurationHandler"]
 - ["PSo8NSCoding", "currentSelectedStation"]
 - ["PSo8NSCoding", "currentSelectedTrip"]
+- ["PSo8NSCoding", "deleteStationButtonPressed"]
+- ["PSo8NSCoding", "deleteTripButtonPressed"]
 - ["PSo8NSCoding", "didReceiveMemoryWarning"]
 - !private ["PSo8NSCoding", "executeFetchRequest"]
 - ["PSo8NSCoding", "init"]
@@ -533,6 +553,8 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "addTextFieldWithConfigurationHandler"]
 - ["PSo26NSExtensionRequestHandling", "currentSelectedStation"]
 - ["PSo26NSExtensionRequestHandling", "currentSelectedTrip"]
+- ["PSo26NSExtensionRequestHandling", "deleteStationButtonPressed"]
+- ["PSo26NSExtensionRequestHandling", "deleteTripButtonPressed"]
 - ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
 - ["PSo26NSExtensionRequestHandling", "init"]
 - ["PSo26NSExtensionRequestHandling", "numberOfComponentsInPickerView"]
@@ -588,6 +610,8 @@ depends-member:
 - ["CSo8NSObject", "currentSelectedTrip"]
 - !private ["CSo8NSObject", "deinit"]
 - !private ["CSo8NSObject", "delegate"]
+- ["CSo8NSObject", "deleteStationButtonPressed"]
+- ["CSo8NSObject", "deleteTripButtonPressed"]
 - ["CSo8NSObject", "didReceiveMemoryWarning"]
 - !private ["CSo8NSObject", "executeFetchRequest"]
 - ["CSo8NSObject", "init"]
@@ -636,6 +660,8 @@ depends-member:
 - ["PSo16NSObjectProtocol", "currentSelectedStation"]
 - ["PSo16NSObjectProtocol", "currentSelectedTrip"]
 - !private ["PSo16NSObjectProtocol", "delegate"]
+- ["PSo16NSObjectProtocol", "deleteStationButtonPressed"]
+- ["PSo16NSObjectProtocol", "deleteTripButtonPressed"]
 - ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
 - !private ["PSo16NSObjectProtocol", "executeFetchRequest"]
 - ["PSo16NSObjectProtocol", "init"]
@@ -679,6 +705,7 @@ depends-member:
 - ["PSs30RangeReplaceableCollectionType", "init"]
 - !private ["PSs30RangeReplaceableCollectionType", "subscript"]
 - !private ["PSs16RawRepresentable", "Alert"]
+- !private ["PSs16RawRepresentable", "Cancel"]
 - !private ["PSs16RawRepresentable", "Default"]
 - !private ["PSs12SequenceType", "Element"]
 - !private ["PSs12SequenceType", "Generator"]
@@ -720,6 +747,7 @@ depends-member:
 - !private ["PSo29UIAccessibilityIdentification", "tag"]
 - !private ["PSo29UIAccessibilityIdentification", "text"]
 - !private ["CSo13UIAlertAction", "init"]
+- !private ["OSC18UIAlertActionStyle", "Cancel"]
 - !private ["OSC18UIAlertActionStyle", "Default"]
 - !private ["CSo17UIAlertController", "addAction"]
 - !private ["CSo17UIAlertController", "addTextFieldWithConfigurationHandler"]
@@ -753,6 +781,8 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "addTextFieldWithConfigurationHandler"]
 - ["PSo21UIAppearanceContainer", "currentSelectedStation"]
 - ["PSo21UIAppearanceContainer", "currentSelectedTrip"]
+- ["PSo21UIAppearanceContainer", "deleteStationButtonPressed"]
+- ["PSo21UIAppearanceContainer", "deleteTripButtonPressed"]
 - ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
 - ["PSo21UIAppearanceContainer", "init"]
 - ["PSo21UIAppearanceContainer", "numberOfComponentsInPickerView"]
@@ -796,6 +826,8 @@ depends-member:
 - !private ["PSo18UIContentContainer", "addTextFieldWithConfigurationHandler"]
 - ["PSo18UIContentContainer", "currentSelectedStation"]
 - ["PSo18UIContentContainer", "currentSelectedTrip"]
+- ["PSo18UIContentContainer", "deleteStationButtonPressed"]
+- ["PSo18UIContentContainer", "deleteTripButtonPressed"]
 - ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
 - ["PSo18UIContentContainer", "init"]
 - ["PSo18UIContentContainer", "numberOfComponentsInPickerView"]
@@ -842,6 +874,8 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "addTextFieldWithConfigurationHandler"]
 - ["PSo18UIFocusEnvironment", "currentSelectedStation"]
 - ["PSo18UIFocusEnvironment", "currentSelectedTrip"]
+- ["PSo18UIFocusEnvironment", "deleteStationButtonPressed"]
+- ["PSo18UIFocusEnvironment", "deleteTripButtonPressed"]
 - ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
 - ["PSo18UIFocusEnvironment", "init"]
 - ["PSo18UIFocusEnvironment", "numberOfComponentsInPickerView"]
@@ -895,6 +929,8 @@ depends-member:
 - ["CSo11UIResponder", "currentSelectedStation"]
 - ["CSo11UIResponder", "currentSelectedTrip"]
 - !private ["CSo11UIResponder", "delegate"]
+- ["CSo11UIResponder", "deleteStationButtonPressed"]
+- ["CSo11UIResponder", "deleteTripButtonPressed"]
 - ["CSo11UIResponder", "didReceiveMemoryWarning"]
 - ["CSo11UIResponder", "init"]
 - !private ["CSo11UIResponder", "managedObjectContext"]
@@ -936,6 +972,8 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "addTextFieldWithConfigurationHandler"]
 - ["PSo16UIStateRestoring", "currentSelectedStation"]
 - ["PSo16UIStateRestoring", "currentSelectedTrip"]
+- ["PSo16UIStateRestoring", "deleteStationButtonPressed"]
+- ["PSo16UIStateRestoring", "deleteTripButtonPressed"]
 - ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
 - ["PSo16UIStateRestoring", "init"]
 - ["PSo16UIStateRestoring", "numberOfComponentsInPickerView"]
@@ -980,6 +1018,8 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "addTextFieldWithConfigurationHandler"]
 - ["PSo18UITraitEnvironment", "currentSelectedStation"]
 - ["PSo18UITraitEnvironment", "currentSelectedTrip"]
+- ["PSo18UITraitEnvironment", "deleteStationButtonPressed"]
+- ["PSo18UITraitEnvironment", "deleteTripButtonPressed"]
 - ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
 - ["PSo18UITraitEnvironment", "init"]
 - ["PSo18UITraitEnvironment", "numberOfComponentsInPickerView"]
@@ -1032,6 +1072,8 @@ depends-member:
 - !private ["CSo16UIViewController", "addTextFieldWithConfigurationHandler"]
 - ["CSo16UIViewController", "currentSelectedStation"]
 - ["CSo16UIViewController", "currentSelectedTrip"]
+- ["CSo16UIViewController", "deleteStationButtonPressed"]
+- ["CSo16UIViewController", "deleteTripButtonPressed"]
 - ["CSo16UIViewController", "didReceiveMemoryWarning"]
 - ["CSo16UIViewController", "init"]
 - ["CSo16UIViewController", "numberOfComponentsInPickerView"]
@@ -1221,12 +1263,12 @@ depends-nominal:
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Foundation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Darwin.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Dispatch.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreGraphics.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreData.swiftmodule"
-interface-hash: "d3bdf560a086fc2fa9490b217ddaed42"
+interface-hash: "3409912b3f7c3d52b775d7afc0108d5d"

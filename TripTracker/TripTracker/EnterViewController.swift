@@ -8,7 +8,8 @@ class EnterViewController: UIViewController {
     var stations = [Station]()
     var currentSelectedTrip: String = ""
     var currentSelectedStation: String = ""
-    
+    @IBOutlet weak var deleteTripButtonPressed: UIButton!
+    @IBOutlet weak var deleteStationButtonPressed: UIButton!
     
     
     @IBOutlet weak var TripNamePickerView: UIPickerView!
@@ -18,6 +19,7 @@ class EnterViewController: UIViewController {
         super.viewDidLoad()
         trips = FetchTripData()
         stations = FetchStationData()
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -28,6 +30,15 @@ class EnterViewController: UIViewController {
     @IBAction func SubmitButtonPressed(sender: UIButton) {
         //Do Data Checks Here
     }
+    
+    @IBAction func deleteTripButtonPressed(sender: UIButton) {
+    	//Delete Current Trip
+    }
+    
+    @IBAction func deleteStationButtonPressed(sender: UIButton) {
+    	//Delete Current Gas Station
+    }
+    
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
@@ -40,8 +51,9 @@ class EnterViewController: UIViewController {
         case 2:
             return stations.count
         default:
-            return 1
+        	return 10
         }
+
     }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
@@ -55,9 +67,10 @@ class EnterViewController: UIViewController {
             updateStationName()
             return stations[row].name
         default:
-            break
+            
+            return trips[row].name
         }
-        return trips[row].name
+        
     }
     
     @IBAction func AddTripButtonPressed(sender: UIBarButtonItem) {
@@ -84,6 +97,8 @@ class EnterViewController: UIViewController {
         })
         
         alertController?.addAction(action)
+        alertController!.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
+
         self.presentViewController(alertController!,
             animated: true,
             completion: nil)
@@ -112,6 +127,8 @@ class EnterViewController: UIViewController {
         })
         
         alertController?.addAction(action)
+        alertController!.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
+
         self.presentViewController(alertController!,
             animated: true,
             completion: nil)

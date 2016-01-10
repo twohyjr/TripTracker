@@ -117,9 +117,12 @@ SWIFT_CLASS("_TtC11TripTracker11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIButton;
 @class UITextField;
-@class UIDatePicker;
+@class GasEntry;
+@class NSString;
 @class UILabel;
+@class UIDatePicker;
 @class NSBundle;
 @class NSCoder;
 
@@ -127,6 +130,7 @@ SWIFT_CLASS("_TtC11TripTracker23DataEntryViewController")
 @interface DataEntryViewController : UIViewController
 @property (nonatomic, copy) NSString * __nonnull stationName;
 @property (nonatomic, copy) NSString * __nonnull tripName;
+@property (nonatomic, weak) IBOutlet UILabel * __null_unspecified successLabel;
 @property (nonatomic, weak) IBOutlet UIDatePicker * __null_unspecified datePickerField;
 @property (nonatomic, weak) IBOutlet UILabel * __null_unspecified tripNameLabel;
 @property (nonatomic, weak) IBOutlet UILabel * __null_unspecified stationNameLabel;
@@ -134,16 +138,23 @@ SWIFT_CLASS("_TtC11TripTracker23DataEntryViewController")
 @property (nonatomic, weak) IBOutlet UITextField * __null_unspecified gasPriceTextField;
 @property (nonatomic, weak) IBOutlet UITextField * __null_unspecified totalGallonsTextField;
 @property (nonatomic, weak) IBOutlet UITextField * __null_unspecified totalPriceTextField;
+@property (nonatomic) BOOL checkInputClear;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
+- (IBAction)SubmitButtonPressed:(UIButton * __nonnull)sender;
 - (BOOL)textFieldShouldReturn:(UITextField * __null_unspecified)textField;
+- (NSArray<GasEntry *> * __nonnull)FetchData;
+- (BOOL)CheckStationEntry:(NSString * __nullable)text;
+- (BOOL)CheckMileageEntry:(NSString * __nullable)text;
+- (BOOL)CheckgasPriceTextField:(NSString * __nullable)text;
+- (BOOL)ChecktotalGallonsTextField:(NSString * __nullable)text;
+- (BOOL)ChecktotalPriceTextField:(NSString * __nullable)text;
 - (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class Trip;
 @class Station;
-@class UIButton;
 @class UIPickerView;
 @class UIBarButtonItem;
 
@@ -153,11 +164,15 @@ SWIFT_CLASS("_TtC11TripTracker19EnterViewController")
 @property (nonatomic, copy) NSArray<Station *> * __nonnull stations;
 @property (nonatomic, copy) NSString * __nonnull currentSelectedTrip;
 @property (nonatomic, copy) NSString * __nonnull currentSelectedStation;
+@property (nonatomic, weak) IBOutlet UIButton * __null_unspecified deleteTripButtonPressed;
+@property (nonatomic, weak) IBOutlet UIButton * __null_unspecified deleteStationButtonPressed;
 @property (nonatomic, weak) IBOutlet UIPickerView * __null_unspecified TripNamePickerView;
 @property (nonatomic, weak) IBOutlet UIPickerView * __null_unspecified StationNamePickerView;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (IBAction)SubmitButtonPressed:(UIButton * __nonnull)sender;
+- (IBAction)deleteTripButtonPressed:(UIButton * __nonnull)sender;
+- (IBAction)deleteStationButtonPressed:(UIButton * __nonnull)sender;
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView * __nonnull)pickerView;
 - (NSInteger)pickerView:(UIPickerView * __nonnull)pickerView numberOfRowsInComponent:(NSInteger)component;
 - (NSString * __null_unspecified)pickerView:(UIPickerView * __nonnull)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component;
@@ -173,11 +188,31 @@ SWIFT_CLASS("_TtC11TripTracker19EnterViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UITableView;
+@class NSIndexPath;
+@class UITableViewCell;
+@class UIToolbar;
+
+SWIFT_CLASS("_TtC11TripTracker24GasEntriesViewController")
+@interface GasEntriesViewController : UIViewController
+@property (nonatomic, copy) NSString * __nonnull stationName;
+@property (nonatomic, copy) NSString * __nonnull tripName;
+@property (nonatomic, weak) IBOutlet UILabel * __null_unspecified tripNameLabel;
+@property (nonatomic, weak) IBOutlet UIToolbar * __null_unspecified toolbar;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (NSInteger)tableView:(UITableView * __null_unspecified)tableView numberOfRowsInSection:(NSInteger)section;
+- (UITableViewCell * __null_unspecified)tableView:(UITableView * __null_unspecified)tableView cellForRowAtIndexPath:(NSIndexPath * __null_unspecified)indexPath;
+- (NSArray<GasEntry *> * __nonnull)FetchData;
+- (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class NSDate;
 
 SWIFT_CLASS("_TtC11TripTracker8GasEntry")
 @interface GasEntry : NSObject
-@property (nonatomic, copy) NSString * __nonnull name;
+@property (nonatomic, copy) NSString * __nonnull tripname;
 @property (nonatomic, copy) NSString * __nonnull station;
 @property (nonatomic) double odom;
 @property (nonatomic) double gasprice;
@@ -185,6 +220,19 @@ SWIFT_CLASS("_TtC11TripTracker8GasEntry")
 @property (nonatomic) double totalprice;
 @property (nonatomic, strong) NSDate * __nonnull date;
 - (nonnull instancetype)initWithDate:(NSDate * __nonnull)date OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC11TripTracker23GasEntryDisplayViewCell")
+@interface GasEntryDisplayViewCell : UITableViewCell
+@property (nonatomic, weak) IBOutlet UILabel * __null_unspecified storeNameLabel;
+@property (nonatomic, weak) IBOutlet UILabel * __null_unspecified dateLabel;
+@property (nonatomic, weak) IBOutlet UILabel * __null_unspecified milesLabel;
+@property (nonatomic, weak) IBOutlet UILabel * __null_unspecified gasPriceLabel;
+- (void)awakeFromNib;
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * __nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -198,6 +246,8 @@ SWIFT_CLASS("_TtC11TripTracker7Station")
 
 SWIFT_CLASS("_TtC11TripTracker24StatisticsViewController")
 @interface StatisticsViewController : UIViewController
+@property (nonatomic, copy) NSString * __nonnull stationName;
+@property (nonatomic, copy) NSString * __nonnull tripName;
 @property (nonatomic, weak) IBOutlet UILabel * __null_unspecified totalMilesTravelled;
 @property (nonatomic, weak) IBOutlet UILabel * __null_unspecified totalGallonsUsed;
 @property (nonatomic, weak) IBOutlet UILabel * __null_unspecified mostFrequentedStations;
@@ -205,6 +255,7 @@ SWIFT_CLASS("_TtC11TripTracker24StatisticsViewController")
 @property (nonatomic, weak) IBOutlet UILabel * __null_unspecified averageMPG;
 @property (nonatomic, weak) IBOutlet UILabel * __null_unspecified averageMiles;
 @property (nonatomic, weak) IBOutlet UILabel * __null_unspecified totalAmountPaid;
+@property (nonatomic, weak) IBOutlet UILabel * __null_unspecified tripNameLabel;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (double)getTotalMilesTraveled:(NSArray<GasEntry *> * __nonnull)gasArray;

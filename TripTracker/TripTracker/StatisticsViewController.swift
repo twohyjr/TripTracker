@@ -5,6 +5,9 @@ import CoreData
 
 class StatisticsViewController: UIViewController{
     
+    var stationName: String = ""
+    var tripName: String = ""
+    
     @IBOutlet weak var totalMilesTravelled: UILabel!
     @IBOutlet weak var totalGallonsUsed: UILabel!
     @IBOutlet weak var mostFrequentedStations: UILabel!
@@ -13,11 +16,15 @@ class StatisticsViewController: UIViewController{
     @IBOutlet weak var averageMiles: UILabel!
     @IBOutlet weak var totalAmountPaid: UILabel!
     
+    @IBOutlet weak var tripNameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.stationName = SharingManager.sharedInstance.stationName
+        self.tripName = SharingManager.sharedInstance.tripName
+        tripNameLabel.text = tripName
         let gasEntryArray: [GasEntry] = FetchData()
-        if(gasEntryArray.count > 0){
+        if(gasEntryArray.count >= 2){
             totalMilesTravelled.text = String(getTotalMilesTraveled(gasEntryArray))
             totalGallonsUsed.text = String(getTotalGallonsUsed(gasEntryArray))
             mostFrequentedStations.text = String(getMostFrequentedStations(gasEntryArray))
@@ -149,23 +156,29 @@ class StatisticsViewController: UIViewController{
             
             if(results.count > 0){
                 for item in results as! [NSManagedObject]{
-                    let station = item.valueForKey("gasStation")
-                    let odom = item.valueForKey("odometer")
-                    let gasprice = item.valueForKey("gasPrice")
-                    let totalgallons = item.valueForKey("totalGallons")
-                    let totalprice = item.valueForKey("totalPrice")
-                    let date = item.valueForKey("date")
+                    let trip:String = String(item.valueForKey("tripName"))
                     
-                    let entry:GasEntry = GasEntry.init(date: date! as! NSDate)
-                    entry.station = station! as! String
-                    entry.odom = odom as! Double
-                    entry.gasprice = gasprice! as! Double
-                    entry.totalgallons = totalgallons! as! Double
-                    entry.totalprice = totalprice! as! Double
+                    //Only displays the content for the current trip
+                    if(trip.containsString(tripName)){
+                        let station = item.valueForKey("gasStation")
+                        let odom = item.valueForKey("odometer")
+                        let gasprice = item.valueForKey("gasPrice")
+                        let totalgallons = item.valueForKey("totalGallons")
+                        let totalprice = item.valueForKey("totalPrice")
+                        let date = item.valueForKey("date")
+                        
+                        let entry:GasEntry = GasEntry.init(date: date! as! NSDate)
+                        entry.station = station! as! String
+                        entry.tripname = tripName
+                        entry.odom = odom as! Double
+                        entry.gasprice = gasprice! as! Double
+                        entry.totalgallons = totalgallons! as! Double
+                        entry.totalprice = totalprice! as! Double
+                        
+                        GasEntries.append(entry)
+                    }
                     
-                    GasEntries.append(entry)
-                    
-                    //print(station!,odom!,gasprice!,totalgallons!,totalprice!,date!)
+                    //                    print(station!,odom!,gasprice!,totalgallons!,totalprice!,date!)
                 }
             }
             

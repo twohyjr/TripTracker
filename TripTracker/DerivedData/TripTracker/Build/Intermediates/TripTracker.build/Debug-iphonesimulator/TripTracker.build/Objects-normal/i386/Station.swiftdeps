@@ -9,10 +9,10 @@ provides-dynamic-lookup:
 - "id"
 - "name"
 depends-top-level:
-- "StringLiteralType"
-- "NSObject"
 - "Int"
 - "Station"
+- "NSObject"
+- "StringLiteralType"
 - "String"
 depends-member:
 - ["PSs9AnyObject", "id"]
