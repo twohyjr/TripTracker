@@ -1,0 +1,229 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "GasEntryDisplayViewCell"
+provides-nominal:
+- "C11TripTracker23GasEntryDisplayViewCell"
+provides-member:
+- ["C11TripTracker23GasEntryDisplayViewCell", ""]
+provides-dynamic-lookup:
+- "dateLabel"
+- "awakeFromNib"
+- "gasPriceLabel"
+- "setSelected"
+- "milesLabel"
+- "storeNameLabel"
+depends-top-level:
+- "Bool"
+- "GasEntryDisplayViewCell"
+- "UITableViewCell"
+- "UILabel"
+depends-member:
+- ["PSs9AnyObject", "awakeFromNib"]
+- ["PSs9AnyObject", "dateLabel"]
+- ["PSs9AnyObject", "gasPriceLabel"]
+- ["PSs9AnyObject", "init"]
+- ["PSs9AnyObject", "milesLabel"]
+- ["PSs9AnyObject", "setSelected"]
+- ["PSs9AnyObject", "storeNameLabel"]
+- ["PSs9AnyObject", ""]
+- ["PSs11CVarArgType", "awakeFromNib"]
+- ["PSs11CVarArgType", "dateLabel"]
+- ["PSs11CVarArgType", "gasPriceLabel"]
+- ["PSs11CVarArgType", "init"]
+- ["PSs11CVarArgType", "milesLabel"]
+- ["PSs11CVarArgType", "setSelected"]
+- ["PSs11CVarArgType", "storeNameLabel"]
+- ["PSs11CVarArgType", ""]
+- ["PSs23CustomStringConvertible", "awakeFromNib"]
+- ["PSs23CustomStringConvertible", "dateLabel"]
+- ["PSs23CustomStringConvertible", "gasPriceLabel"]
+- ["PSs23CustomStringConvertible", "init"]
+- ["PSs23CustomStringConvertible", "milesLabel"]
+- ["PSs23CustomStringConvertible", "setSelected"]
+- ["PSs23CustomStringConvertible", "storeNameLabel"]
+- ["PSs23CustomStringConvertible", ""]
+- ["PSs9Equatable", "awakeFromNib"]
+- ["PSs9Equatable", "dateLabel"]
+- ["PSs9Equatable", "gasPriceLabel"]
+- ["PSs9Equatable", "init"]
+- ["PSs9Equatable", "milesLabel"]
+- ["PSs9Equatable", "setSelected"]
+- ["PSs9Equatable", "storeNameLabel"]
+- ["PSs9Equatable", ""]
+- ["C11TripTracker23GasEntryDisplayViewCell", "Bool"]
+- ["C11TripTracker23GasEntryDisplayViewCell", "UILabel"]
+- ["C11TripTracker23GasEntryDisplayViewCell", "awakeFromNib"]
+- ["C11TripTracker23GasEntryDisplayViewCell", "dateLabel"]
+- ["C11TripTracker23GasEntryDisplayViewCell", "deinit"]
+- ["C11TripTracker23GasEntryDisplayViewCell", "gasPriceLabel"]
+- ["C11TripTracker23GasEntryDisplayViewCell", "init"]
+- ["C11TripTracker23GasEntryDisplayViewCell", "milesLabel"]
+- ["C11TripTracker23GasEntryDisplayViewCell", "setSelected"]
+- ["C11TripTracker23GasEntryDisplayViewCell", "storeNameLabel"]
+- ["PSs8Hashable", "awakeFromNib"]
+- ["PSs8Hashable", "dateLabel"]
+- ["PSs8Hashable", "gasPriceLabel"]
+- ["PSs8Hashable", "init"]
+- ["PSs8Hashable", "milesLabel"]
+- ["PSs8Hashable", "setSelected"]
+- ["PSs8Hashable", "storeNameLabel"]
+- ["PSs8Hashable", ""]
+- ["PSo8NSCoding", "awakeFromNib"]
+- ["PSo8NSCoding", "dateLabel"]
+- ["PSo8NSCoding", "gasPriceLabel"]
+- ["PSo8NSCoding", "init"]
+- ["PSo8NSCoding", "milesLabel"]
+- ["PSo8NSCoding", "setSelected"]
+- ["PSo8NSCoding", "storeNameLabel"]
+- ["PSo8NSCoding", ""]
+- ["CSo8NSObject", "Bool"]
+- ["CSo8NSObject", "UILabel"]
+- ["CSo8NSObject", "awakeFromNib"]
+- ["CSo8NSObject", "dateLabel"]
+- ["CSo8NSObject", "gasPriceLabel"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "milesLabel"]
+- ["CSo8NSObject", "setSelected"]
+- ["CSo8NSObject", "storeNameLabel"]
+- ["PSo16NSObjectProtocol", "awakeFromNib"]
+- ["PSo16NSObjectProtocol", "dateLabel"]
+- ["PSo16NSObjectProtocol", "gasPriceLabel"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "milesLabel"]
+- ["PSo16NSObjectProtocol", "setSelected"]
+- ["PSo16NSObjectProtocol", "storeNameLabel"]
+- ["PSo16NSObjectProtocol", ""]
+- ["PSo29UIAccessibilityIdentification", "awakeFromNib"]
+- ["PSo29UIAccessibilityIdentification", "dateLabel"]
+- ["PSo29UIAccessibilityIdentification", "gasPriceLabel"]
+- ["PSo29UIAccessibilityIdentification", "init"]
+- ["PSo29UIAccessibilityIdentification", "milesLabel"]
+- ["PSo29UIAccessibilityIdentification", "setSelected"]
+- ["PSo29UIAccessibilityIdentification", "storeNameLabel"]
+- ["PSo29UIAccessibilityIdentification", ""]
+- ["PSo12UIAppearance", "awakeFromNib"]
+- ["PSo12UIAppearance", "dateLabel"]
+- ["PSo12UIAppearance", "gasPriceLabel"]
+- ["PSo12UIAppearance", "init"]
+- ["PSo12UIAppearance", "milesLabel"]
+- ["PSo12UIAppearance", "setSelected"]
+- ["PSo12UIAppearance", "storeNameLabel"]
+- ["PSo12UIAppearance", ""]
+- ["PSo21UIAppearanceContainer", "awakeFromNib"]
+- ["PSo21UIAppearanceContainer", "dateLabel"]
+- ["PSo21UIAppearanceContainer", "gasPriceLabel"]
+- ["PSo21UIAppearanceContainer", "init"]
+- ["PSo21UIAppearanceContainer", "milesLabel"]
+- ["PSo21UIAppearanceContainer", "setSelected"]
+- ["PSo21UIAppearanceContainer", "storeNameLabel"]
+- ["PSo21UIAppearanceContainer", ""]
+- ["PSo17UICoordinateSpace", "awakeFromNib"]
+- ["PSo17UICoordinateSpace", "dateLabel"]
+- ["PSo17UICoordinateSpace", "gasPriceLabel"]
+- ["PSo17UICoordinateSpace", "init"]
+- ["PSo17UICoordinateSpace", "milesLabel"]
+- ["PSo17UICoordinateSpace", "setSelected"]
+- ["PSo17UICoordinateSpace", "storeNameLabel"]
+- ["PSo17UICoordinateSpace", ""]
+- ["PSo13UIDynamicItem", "awakeFromNib"]
+- ["PSo13UIDynamicItem", "dateLabel"]
+- ["PSo13UIDynamicItem", "gasPriceLabel"]
+- ["PSo13UIDynamicItem", "init"]
+- ["PSo13UIDynamicItem", "milesLabel"]
+- ["PSo13UIDynamicItem", "setSelected"]
+- ["PSo13UIDynamicItem", "storeNameLabel"]
+- ["PSo13UIDynamicItem", ""]
+- ["PSo18UIFocusEnvironment", "awakeFromNib"]
+- ["PSo18UIFocusEnvironment", "dateLabel"]
+- ["PSo18UIFocusEnvironment", "gasPriceLabel"]
+- ["PSo18UIFocusEnvironment", "init"]
+- ["PSo18UIFocusEnvironment", "milesLabel"]
+- ["PSo18UIFocusEnvironment", "setSelected"]
+- ["PSo18UIFocusEnvironment", "storeNameLabel"]
+- ["PSo18UIFocusEnvironment", ""]
+- ["PSo27UIGestureRecognizerDelegate", "awakeFromNib"]
+- ["PSo27UIGestureRecognizerDelegate", "dateLabel"]
+- ["PSo27UIGestureRecognizerDelegate", "gasPriceLabel"]
+- ["PSo27UIGestureRecognizerDelegate", "init"]
+- ["PSo27UIGestureRecognizerDelegate", "milesLabel"]
+- ["PSo27UIGestureRecognizerDelegate", "setSelected"]
+- ["PSo27UIGestureRecognizerDelegate", "storeNameLabel"]
+- ["PSo27UIGestureRecognizerDelegate", ""]
+- ["CSo11UIResponder", "Bool"]
+- ["CSo11UIResponder", "UILabel"]
+- ["CSo11UIResponder", "awakeFromNib"]
+- ["CSo11UIResponder", "dateLabel"]
+- ["CSo11UIResponder", "gasPriceLabel"]
+- ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "milesLabel"]
+- ["CSo11UIResponder", "setSelected"]
+- ["CSo11UIResponder", "storeNameLabel"]
+- ["CSo15UITableViewCell", "Bool"]
+- ["CSo15UITableViewCell", "UILabel"]
+- ["CSo15UITableViewCell", "awakeFromNib"]
+- ["CSo15UITableViewCell", "dateLabel"]
+- ["CSo15UITableViewCell", "gasPriceLabel"]
+- ["CSo15UITableViewCell", "init"]
+- ["CSo15UITableViewCell", "milesLabel"]
+- ["CSo15UITableViewCell", "setSelected"]
+- ["CSo15UITableViewCell", "storeNameLabel"]
+- ["CSo15UITableViewCell", ""]
+- ["PSo18UITraitEnvironment", "awakeFromNib"]
+- ["PSo18UITraitEnvironment", "dateLabel"]
+- ["PSo18UITraitEnvironment", "gasPriceLabel"]
+- ["PSo18UITraitEnvironment", "init"]
+- ["PSo18UITraitEnvironment", "milesLabel"]
+- ["PSo18UITraitEnvironment", "setSelected"]
+- ["PSo18UITraitEnvironment", "storeNameLabel"]
+- ["PSo18UITraitEnvironment", ""]
+- ["CSo6UIView", "Bool"]
+- ["CSo6UIView", "UILabel"]
+- ["CSo6UIView", "awakeFromNib"]
+- ["CSo6UIView", "dateLabel"]
+- ["CSo6UIView", "gasPriceLabel"]
+- ["CSo6UIView", "init"]
+- ["CSo6UIView", "milesLabel"]
+- ["CSo6UIView", "setSelected"]
+- ["CSo6UIView", "storeNameLabel"]
+- ["PSs12_Reflectable", "awakeFromNib"]
+- ["PSs12_Reflectable", "dateLabel"]
+- ["PSs12_Reflectable", "gasPriceLabel"]
+- ["PSs12_Reflectable", "init"]
+- ["PSs12_Reflectable", "milesLabel"]
+- ["PSs12_Reflectable", "setSelected"]
+- ["PSs12_Reflectable", "storeNameLabel"]
+- ["PSs12_Reflectable", ""]
+depends-nominal:
+- "PSs9AnyObject"
+- "PSs11CVarArgType"
+- "PSs23CustomStringConvertible"
+- "PSs9Equatable"
+- "C11TripTracker23GasEntryDisplayViewCell"
+- "PSs8Hashable"
+- "PSo8NSCoding"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "PSo29UIAccessibilityIdentification"
+- "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- "PSo17UICoordinateSpace"
+- "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- "PSo27UIGestureRecognizerDelegate"
+- "CSo11UIResponder"
+- "CSo15UITableViewCell"
+- "PSo18UITraitEnvironment"
+- "CSo6UIView"
+- "PSs12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreData.swiftmodule"
+interface-hash: "0ea63fba82165f0570313ca0a138f71d"
