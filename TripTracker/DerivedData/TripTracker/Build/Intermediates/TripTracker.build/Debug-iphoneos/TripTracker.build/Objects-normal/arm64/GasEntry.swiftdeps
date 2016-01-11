@@ -1,0 +1,146 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "GasEntry"
+provides-nominal:
+- "C11TripTracker8GasEntry"
+provides-member:
+- ["C11TripTracker8GasEntry", ""]
+provides-dynamic-lookup:
+- "gasprice"
+- "tripname"
+- "totalprice"
+- "station"
+- "tripID"
+- "date"
+- "odom"
+- "totalgallons"
+depends-top-level:
+- "GasEntry"
+- "NSObject"
+- "StringLiteralType"
+- "NSManagedObjectID"
+- "NSDate"
+- "Double"
+- "String"
+depends-member:
+- ["PSs9AnyObject", "NSManagedObjectID"]
+- ["PSs9AnyObject", "date"]
+- ["PSs9AnyObject", "gasprice"]
+- ["PSs9AnyObject", "init"]
+- ["PSs9AnyObject", "odom"]
+- ["PSs9AnyObject", "station"]
+- ["PSs9AnyObject", "totalgallons"]
+- ["PSs9AnyObject", "totalprice"]
+- ["PSs9AnyObject", "tripID"]
+- ["PSs9AnyObject", "tripname"]
+- ["PSs9AnyObject", ""]
+- ["PSs11CVarArgType", "NSManagedObjectID"]
+- ["PSs11CVarArgType", "date"]
+- ["PSs11CVarArgType", "gasprice"]
+- ["PSs11CVarArgType", "init"]
+- ["PSs11CVarArgType", "odom"]
+- ["PSs11CVarArgType", "station"]
+- ["PSs11CVarArgType", "totalgallons"]
+- ["PSs11CVarArgType", "totalprice"]
+- ["PSs11CVarArgType", "tripID"]
+- ["PSs11CVarArgType", "tripname"]
+- ["PSs11CVarArgType", ""]
+- ["PSs23CustomStringConvertible", "NSManagedObjectID"]
+- ["PSs23CustomStringConvertible", "date"]
+- ["PSs23CustomStringConvertible", "gasprice"]
+- ["PSs23CustomStringConvertible", "init"]
+- ["PSs23CustomStringConvertible", "odom"]
+- ["PSs23CustomStringConvertible", "station"]
+- ["PSs23CustomStringConvertible", "totalgallons"]
+- ["PSs23CustomStringConvertible", "totalprice"]
+- ["PSs23CustomStringConvertible", "tripID"]
+- ["PSs23CustomStringConvertible", "tripname"]
+- ["PSs23CustomStringConvertible", ""]
+- ["PSs9Equatable", "NSManagedObjectID"]
+- ["PSs9Equatable", "date"]
+- ["PSs9Equatable", "gasprice"]
+- ["PSs9Equatable", "init"]
+- ["PSs9Equatable", "odom"]
+- ["PSs9Equatable", "station"]
+- ["PSs9Equatable", "totalgallons"]
+- ["PSs9Equatable", "totalprice"]
+- ["PSs9Equatable", "tripID"]
+- ["PSs9Equatable", "tripname"]
+- ["PSs9Equatable", ""]
+- ["C11TripTracker8GasEntry", "Double"]
+- ["C11TripTracker8GasEntry", "NSDate"]
+- ["C11TripTracker8GasEntry", "NSManagedObjectID"]
+- ["C11TripTracker8GasEntry", "String"]
+- ["C11TripTracker8GasEntry", "date"]
+- ["C11TripTracker8GasEntry", "deinit"]
+- ["C11TripTracker8GasEntry", "gasprice"]
+- ["C11TripTracker8GasEntry", "init"]
+- ["C11TripTracker8GasEntry", "odom"]
+- ["C11TripTracker8GasEntry", "station"]
+- ["C11TripTracker8GasEntry", "totalgallons"]
+- ["C11TripTracker8GasEntry", "totalprice"]
+- ["C11TripTracker8GasEntry", "tripID"]
+- ["C11TripTracker8GasEntry", "tripname"]
+- ["PSs8Hashable", "NSManagedObjectID"]
+- ["PSs8Hashable", "date"]
+- ["PSs8Hashable", "gasprice"]
+- ["PSs8Hashable", "init"]
+- ["PSs8Hashable", "odom"]
+- ["PSs8Hashable", "station"]
+- ["PSs8Hashable", "totalgallons"]
+- ["PSs8Hashable", "totalprice"]
+- ["PSs8Hashable", "tripID"]
+- ["PSs8Hashable", "tripname"]
+- ["PSs8Hashable", ""]
+- ["PSo9NSCopying", "init"]
+- ["CSo17NSManagedObjectID", "init"]
+- ["CSo8NSObject", "Double"]
+- ["CSo8NSObject", "NSDate"]
+- ["CSo8NSObject", "NSManagedObjectID"]
+- ["CSo8NSObject", "String"]
+- ["CSo8NSObject", "date"]
+- ["CSo8NSObject", "gasprice"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "odom"]
+- ["CSo8NSObject", "station"]
+- ["CSo8NSObject", "totalgallons"]
+- ["CSo8NSObject", "totalprice"]
+- ["CSo8NSObject", "tripID"]
+- ["CSo8NSObject", "tripname"]
+- ["CSo8NSObject", ""]
+- ["PSo16NSObjectProtocol", "NSManagedObjectID"]
+- ["PSo16NSObjectProtocol", "date"]
+- ["PSo16NSObjectProtocol", "gasprice"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "odom"]
+- ["PSo16NSObjectProtocol", "station"]
+- ["PSo16NSObjectProtocol", "totalgallons"]
+- ["PSo16NSObjectProtocol", "totalprice"]
+- ["PSo16NSObjectProtocol", "tripID"]
+- ["PSo16NSObjectProtocol", "tripname"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["VSs12StaticString", "deinit"]
+depends-nominal:
+- "PSs9AnyObject"
+- "PSs11CVarArgType"
+- "PSs23CustomStringConvertible"
+- "PSs9Equatable"
+- "C11TripTracker8GasEntry"
+- "PSs8Hashable"
+- "PSo9NSCopying"
+- "CSo17NSManagedObjectID"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "VSs12StaticString"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
+interface-hash: "25f8c8800e075bd58a31723c202efdc4"

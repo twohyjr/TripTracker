@@ -1,0 +1,15 @@
+version: "Apple Swift version 2.1.1 (swiftlang-700.1.101.15 clang-700.1.81)"
+options: "b01bbaf330e380648aa546970729b29d"
+build_time: [505805877, 439505000]
+inputs:
+  "/Users/twohyjr/Documents/Projects/TripTracker/TripTracker/TripTracker/ViewController.swift": [505552659, 0]
+  "/Users/twohyjr/Documents/Projects/TripTracker/TripTracker/TripTracker/DataEntryViewController.swift": [505803420, 0]
+  "/Users/twohyjr/Documents/Projects/TripTracker/TripTracker/GasEntry.swift": [505782253, 0]
+  "/Users/twohyjr/Documents/Projects/TripTracker/TripTracker/TripTracker/Trip.swift": [505552659, 0]
+  "/Users/twohyjr/Documents/Projects/TripTracker/TripTracker/TripTracker/GasEntriesViewController.swift": [505783310, 0]
+  "/Users/twohyjr/Documents/Projects/TripTracker/TripTracker/TripTracker/GasEditViewController.swift": [505803256, 0]
+  "/Users/twohyjr/Documents/Projects/TripTracker/TripTracker/TripTracker/GasEntryDisplayViewCell.swift": [505765647, 0]
+  "/Users/twohyjr/Documents/Projects/TripTracker/TripTracker/TripTracker/StatisticsViewController.swift": [505786734, 0]
+  "/Users/twohyjr/Documents/Projects/TripTracker/TripTracker/TripTracker/AppDelegate.swift": [505552659, 0]
+  "/Users/twohyjr/Documents/Projects/TripTracker/TripTracker/TripTracker/EnterViewController.swift": [505784285, 0]
+  "/Users/twohyjr/Documents/Projects/TripTracker/TripTracker/TripTracker/Station.swift": [505552659, 0]
