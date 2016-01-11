@@ -1,4 +1,6 @@
 import Foundation
+import CoreData
+
 
 class GasEntry: NSObject {
     
@@ -9,6 +11,7 @@ class GasEntry: NSObject {
     var totalgallons:Double = 0.0
     var totalprice:Double = 0.0
     var date:NSDate
+    var tripID:NSManagedObjectID = NSManagedObjectID()
     
     init(date:NSDate) {
         self.date = date

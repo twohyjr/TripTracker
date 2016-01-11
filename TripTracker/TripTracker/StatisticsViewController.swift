@@ -25,6 +25,7 @@ class StatisticsViewController: UIViewController{
         tripNameLabel.text = tripName
         let gasEntryArray: [GasEntry] = FetchData()
         if(gasEntryArray.count >= 2){
+            
             totalMilesTravelled.text = String(getTotalMilesTraveled(gasEntryArray))
             totalGallonsUsed.text = String(getTotalGallonsUsed(gasEntryArray))
             mostFrequentedStations.text = String(getMostFrequentedStations(gasEntryArray))
@@ -76,7 +77,7 @@ class StatisticsViewController: UIViewController{
         return Double(total)
     }
     
-    func getAverageMPG(gasArray: [GasEntry])-> Double{
+    func getAverageMPG(gasArray: [GasEntry])-> String{
         
         var milesTravelled = [Double]()
         var gallonsArray = [Double]()
@@ -116,19 +117,19 @@ class StatisticsViewController: UIViewController{
             
         }
         
-        
-        return totalMilesPerGallon/Double(size)
+        let x = Double(totalMilesPerGallon/Double(size))
+        return String(format: "%g", x)
         
     }
     
-    func getAverageMiles(gasArray: [GasEntry])-> Double{
+    func getAverageMiles(gasArray: [GasEntry])-> String{
         
         var total: Double = gasArray[gasArray.count - 1].odom
         let count: Double = Double(gasArray.count) - 1
         
         total = total/count
         
-        return total
+        return String(format: "%g", total)
     }
     
     func getTotalAmountPaid(gasArray: [GasEntry])-> Double{
@@ -166,6 +167,7 @@ class StatisticsViewController: UIViewController{
                         let totalgallons = item.valueForKey("totalGallons")
                         let totalprice = item.valueForKey("totalPrice")
                         let date = item.valueForKey("date")
+                        let tripID: NSManagedObjectID = item.objectID
                         
                         let entry:GasEntry = GasEntry.init(date: date! as! NSDate)
                         entry.station = station! as! String
@@ -174,7 +176,7 @@ class StatisticsViewController: UIViewController{
                         entry.gasprice = gasprice! as! Double
                         entry.totalgallons = totalgallons! as! Double
                         entry.totalprice = totalprice! as! Double
-                        
+                        entry.tripID = tripID
                         GasEntries.append(entry)
                     }
                     

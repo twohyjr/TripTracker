@@ -7,6 +7,7 @@
         <attribute name="odometer" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="totalGallons" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="totalPrice" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="tripId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="tripName" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Stations" syncable="YES">
@@ -20,6 +21,6 @@
     <elements>
         <element name="Stations" positionX="-36" positionY="27" width="128" height="75"/>
         <element name="Trips" positionX="-54" positionY="-9" width="128" height="75"/>
-        <element name="GasEntries" positionX="-45" positionY="27" width="128" height="150"/>
+        <element name="GasEntries" positionX="-45" positionY="27" width="128" height="165"/>
     </elements>
 </model>

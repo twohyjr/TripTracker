@@ -8,8 +8,12 @@ class DataEntryViewController: UIViewController{
     var stationName: String = ""
     var tripName: String = ""
     
+    @IBOutlet weak var messageField: UITextField!
+    
+    @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var successLabel: UILabel!
+    var activeField: UITextField?
     
     @IBOutlet weak var datePickerField: UIDatePicker!
     @IBOutlet weak var tripNameLabel: UILabel!
@@ -23,6 +27,9 @@ class DataEntryViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name: UIKeyboardWillHideNotification, object: nil)
+        
         self.stationName = SharingManager.sharedInstance.stationName
         self.tripName = SharingManager.sharedInstance.tripName
         tripNameLabel.text = tripName
@@ -38,6 +45,33 @@ class DataEntryViewController: UIViewController{
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func keyboardWillHide(sender: NSNotification) {
+        let userInfo: [NSObject : AnyObject] = sender.userInfo!
+        let keyboardSize: CGSize = userInfo[UIKeyboardFrameBeginUserInfoKey]!.CGRectValue.size
+        self.view.frame.origin.y += keyboardSize.height
+    }
+    
+    func keyboardWillShow(sender: NSNotification) {
+        let userInfo: [NSObject : AnyObject] = sender.userInfo!
+        let keyboardSize: CGSize = userInfo[UIKeyboardFrameBeginUserInfoKey]!.CGRectValue.size
+        let offset: CGSize = userInfo[UIKeyboardFrameEndUserInfoKey]!.CGRectValue.size
+        
+        if keyboardSize.height == offset.height {
+            UIView.animateWithDuration(0.1, animations: { () -> Void in
+                self.view.frame.origin.y -= keyboardSize.height
+            })
+        } else {
+            UIView.animateWithDuration(0.1, animations: { () -> Void in
+                self.view.frame.origin.y += keyboardSize.height - offset.height
+            })
+        }
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillShowNotification, object: self.view.window)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillHideNotification, object: self.view.window)
     }
 
     @IBAction func SubmitButtonPressed(sender: UIButton) {
@@ -88,13 +122,7 @@ class DataEntryViewController: UIViewController{
                 print("There was an error saving data")
                 
             }
-            
-            //Testing
-//            let gasEntryArray: [GasEntry] = FetchData()
-//            for items in gasEntryArray {
-//                print(items.tripName)
-//            }
-            
+
             successLabel.text = "Successful"
             currentMileageTextField.text = ""
             gasPriceTextField.text = ""
@@ -107,12 +135,11 @@ class DataEntryViewController: UIViewController{
         }
     }
     
-    
     func textFieldShouldReturn(textField: UITextField!) -> Bool {   //delegate method
         textField.resignFirstResponder()
         return true
     }
-    
+
     func FetchData() -> [GasEntry]{
         var GasEntries = [GasEntry]()
         
@@ -127,24 +154,30 @@ class DataEntryViewController: UIViewController{
             
             if(results.count > 0){
                 for item in results as! [NSManagedObject]{
-                    let station = item.valueForKey("gasStation")
-                    let odom = item.valueForKey("odometer")
-                    let gasprice = item.valueForKey("gasPrice")
-                    let totalgallons = item.valueForKey("totalGallons")
-                    let totalprice = item.valueForKey("totalPrice")
-                    let date = item.valueForKey("date")
+                    let trip:String = String(item.valueForKey("tripName"))
                     
-                    let entry:GasEntry = GasEntry.init(date: date! as! NSDate)
-                    entry.station = stationName
-                    entry.tripname = tripName
-                    entry.odom = odom as! Double
-                    entry.gasprice = gasprice! as! Double
-                    entry.totalgallons = totalgallons! as! Double
-                    entry.totalprice = totalprice! as! Double
+                    //Only displays the content for the current trip
+                    if(trip.containsString(tripName)){
+                        let station = item.valueForKey("gasStation")
+                        let odom = item.valueForKey("odometer")
+                        let gasprice = item.valueForKey("gasPrice")
+                        let totalgallons = item.valueForKey("totalGallons")
+                        let totalprice = item.valueForKey("totalPrice")
+                        let date = item.valueForKey("date")
+                        let tripID: NSManagedObjectID = item.objectID
+                        
+                        let entry:GasEntry = GasEntry.init(date: date! as! NSDate)
+                        entry.station = station! as! String
+                        entry.tripname = tripName
+                        entry.odom = odom as! Double
+                        entry.gasprice = gasprice! as! Double
+                        entry.totalgallons = totalgallons! as! Double
+                        entry.totalprice = totalprice! as! Double
+                        entry.tripID = tripID
+                        GasEntries.append(entry)
+                    }
                     
-                    GasEntries.append(entry)
-                    
-                    print(station!,odom!,gasprice!,totalgallons!,totalprice!,date!)
+                    //                    print(station!,odom!,gasprice!,totalgallons!,totalprice!,date!)
                 }
             }
             

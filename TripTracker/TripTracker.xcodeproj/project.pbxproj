@@ -11,6 +11,7 @@
 		BD29DB671C4081970049A1AA /* GasEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD29DB661C4081970049A1AA /* GasEntry.swift */; };
 		BD29DB691C42C2E20049A1AA /* GasEntriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD29DB681C42C2E20049A1AA /* GasEntriesViewController.swift */; };
 		BD29DB6D1C42D4D80049A1AA /* GasEntryDisplayViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD29DB6C1C42D4D80049A1AA /* GasEntryDisplayViewCell.swift */; };
+		BD29DB6F1C42FA740049A1AA /* GasEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD29DB6E1C42FA740049A1AA /* GasEditViewController.swift */; };
 		BD54C79B1C3F767B003AB46E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD54C79A1C3F767B003AB46E /* AppDelegate.swift */; };
 		BD54C79D1C3F767B003AB46E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD54C79C1C3F767B003AB46E /* ViewController.swift */; };
 		BD54C7A01C3F767B003AB46E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD54C79E1C3F767B003AB46E /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 		BD29DB661C4081970049A1AA /* GasEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GasEntry.swift; path = ../GasEntry.swift; sourceTree = "<group>"; };
 		BD29DB681C42C2E20049A1AA /* GasEntriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GasEntriesViewController.swift; sourceTree = "<group>"; };
 		BD29DB6C1C42D4D80049A1AA /* GasEntryDisplayViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GasEntryDisplayViewCell.swift; sourceTree = "<group>"; };
+		BD29DB6E1C42FA740049A1AA /* GasEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GasEditViewController.swift; sourceTree = "<group>"; };
 		BD54C7971C3F767B003AB46E /* TripTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD54C79A1C3F767B003AB46E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD54C79C1C3F767B003AB46E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				BD54C7B11C3F8414003AB46E /* Station.swift */,
 				BD54C7B31C3F85BE003AB46E /* Trip.swift */,
 				BD29DB661C4081970049A1AA /* GasEntry.swift */,
+				BD29DB6E1C42FA740049A1AA /* GasEditViewController.swift */,
 				BD54C7AF1C3F76CE003AB46E /* EnterViewController.swift */,
 				BD54C7B51C3F8920003AB46E /* DataEntryViewController.swift */,
 				BD29DB641C40816A0049A1AA /* StatisticsViewController.swift */,
@@ -173,6 +176,7 @@
 				BD29DB671C4081970049A1AA /* GasEntry.swift in Sources */,
 				BD54C7B01C3F76CE003AB46E /* EnterViewController.swift in Sources */,
 				BD54C79D1C3F767B003AB46E /* ViewController.swift in Sources */,
+				BD29DB6F1C42FA740049A1AA /* GasEditViewController.swift in Sources */,
 				BD54C79B1C3F767B003AB46E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

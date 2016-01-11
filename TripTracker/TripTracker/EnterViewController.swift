@@ -6,6 +6,11 @@ class EnterViewController: UIViewController {
     
     var trips = [Trip]()
     var stations = [Station]()
+    var allData = [GasEntry]()
+    
+    var tripIndex: Int = 0
+    var stationIndex: Int = 0
+    
     var currentSelectedTrip: String = ""
     var currentSelectedStation: String = ""
     @IBOutlet weak var deleteTripButtonPressed: UIButton!
@@ -19,7 +24,7 @@ class EnterViewController: UIViewController {
         super.viewDidLoad()
         trips = FetchTripData()
         stations = FetchStationData()
-        
+        allData = FetchData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -32,7 +37,8 @@ class EnterViewController: UIViewController {
     }
     
     @IBAction func deleteTripButtonPressed(sender: UIButton) {
-    	//Delete Current Trip
+    	deleteEntityObject(tripIndex, entityName: "Trips")
+        TripNamePickerView.reloadAllComponents()
     }
     
     @IBAction func deleteStationButtonPressed(sender: UIButton) {
@@ -43,6 +49,7 @@ class EnterViewController: UIViewController {
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
+    
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         switch(pickerView.tag){
@@ -61,10 +68,12 @@ class EnterViewController: UIViewController {
         case 1:
             currentSelectedTrip = trips[row].name
             updateTripName()
+            tripIndex = row
             return trips[row].name
         case 2:
             currentSelectedStation = stations[row].name
             updateStationName()
+            stationIndex = row
             return stations[row].name
         default:
             
@@ -134,7 +143,74 @@ class EnterViewController: UIViewController {
             completion: nil)
     }
     
+    func deleteEntityObject(index: Int, entityName: String){
+        
+//        let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+//        let context: NSManagedObjectContext = appDel.managedObjectContext
+//        
+//        //Retrieve the data
+//        do{
+//            let request = NSFetchRequest(entityName: entityName)
+//            let results = try context.executeFetchRequest(request)
+//            if(results.count > 0){
+//                for item in results as! [NSManagedObject]{
+//                    let trip:String = String(item.valueForKey("tripName"))
+//                    let compTrip:String = trips[index].name
+//                    if(trip.containsString(compTrip)){
+//                        context.deleteObject(item)
+//                        break;
+//                    }
+//                }
+//            }
+//            
+//        }catch{
+//            print("There was an error getting data")
+//        }
+//        
+    }
     
+    func FetchData() -> [GasEntry]{
+        var GasEntries = [GasEntry]()
+        
+        let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let context: NSManagedObjectContext = appDel.managedObjectContext
+        
+        //Retrieve the data
+        do{
+            
+            let request = NSFetchRequest(entityName: "GasEntries")
+            let results = try context.executeFetchRequest(request)
+            
+            if(results.count > 0){
+                for item in results as! [NSManagedObject]{
+                    	let trip:String = String(item.valueForKey("tripName"))
+                        let station = item.valueForKey("gasStation")
+                        let odom = item.valueForKey("odometer")
+                        let gasprice = item.valueForKey("gasPrice")
+                        let totalgallons = item.valueForKey("totalGallons")
+                        let totalprice = item.valueForKey("totalPrice")
+                        let date = item.valueForKey("date")
+                        let tripID: NSManagedObjectID = item.objectID
+                        
+                        let entry:GasEntry = GasEntry.init(date: date! as! NSDate)
+                        entry.station = station! as! String
+                        entry.tripname = trip
+                        entry.odom = odom as! Double
+                        entry.gasprice = gasprice! as! Double
+                        entry.totalgallons = totalgallons! as! Double
+                        entry.totalprice = totalprice! as! Double
+                        entry.tripID = tripID
+                        GasEntries.append(entry)
+                    
+                    //                    print(station!,odom!,gasprice!,totalgallons!,totalprice!,date!)
+                }
+            }
+            
+        }catch{
+            print("There was an error getting data")
+        }
+        return GasEntries
+    }
     
     func FetchStationData() -> [Station]{
         var StationEntries = [Station]()
