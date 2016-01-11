@@ -4,11 +4,39 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>AppIcon29x29@2x.png</key>
+		<data>
+		V5fRlwlCHgdivjifG2UahzAwuog=
+		</data>
+		<key>AppIcon29x29@3x.png</key>
+		<data>
+		a838ipOraGEwn4rYXpxbqwCmOSE=
+		</data>
+		<key>AppIcon40x40@2x.png</key>
+		<data>
+		PyabKcYoz6rb0RwPaxnPYz25RrY=
+		</data>
+		<key>AppIcon40x40@3x.png</key>
+		<data>
+		b8Qx+Osr/XrhYpwK8LbtJhavYrU=
+		</data>
+		<key>AppIcon60x60@2x.png</key>
+		<data>
+		b8Qx+Osr/XrhYpwK8LbtJhavYrU=
+		</data>
+		<key>AppIcon60x60@3x.png</key>
+		<data>
+		4WQ2MTu+LLRzTe7Nf7filWgvqcU=
+		</data>
+		<key>Assets.car</key>
+		<data>
+		gR/Ook65+MLwDIKzI5EsYGTaqg4=
+		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UUpaUkqkvaju6ILjItc+X6sYXs0=
+			4mg6yp39ZeQLtp/25Qfi94R6VUY=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -26,7 +54,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			CjMTUUpjfbfQOVTPoYJ3HeTobyY=
+			KPHYJ4q7CuqfKIkpxbF8UC+Nu7A=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -172,7 +200,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		1YBgI4SSJJ3Pc+D2xsw1f3aTVGk=
+		Bcm8qogFkYar4BUdNIixXikFVh8=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -197,11 +225,39 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>AppIcon29x29@2x.png</key>
+		<data>
+		V5fRlwlCHgdivjifG2UahzAwuog=
+		</data>
+		<key>AppIcon29x29@3x.png</key>
+		<data>
+		a838ipOraGEwn4rYXpxbqwCmOSE=
+		</data>
+		<key>AppIcon40x40@2x.png</key>
+		<data>
+		PyabKcYoz6rb0RwPaxnPYz25RrY=
+		</data>
+		<key>AppIcon40x40@3x.png</key>
+		<data>
+		b8Qx+Osr/XrhYpwK8LbtJhavYrU=
+		</data>
+		<key>AppIcon60x60@2x.png</key>
+		<data>
+		b8Qx+Osr/XrhYpwK8LbtJhavYrU=
+		</data>
+		<key>AppIcon60x60@3x.png</key>
+		<data>
+		4WQ2MTu+LLRzTe7Nf7filWgvqcU=
+		</data>
+		<key>Assets.car</key>
+		<data>
+		gR/Ook65+MLwDIKzI5EsYGTaqg4=
+		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UUpaUkqkvaju6ILjItc+X6sYXs0=
+			4mg6yp39ZeQLtp/25Qfi94R6VUY=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -219,7 +275,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			CjMTUUpjfbfQOVTPoYJ3HeTobyY=
+			KPHYJ4q7CuqfKIkpxbF8UC+Nu7A=
 			</data>
 			<key>optional</key>
 			<true/>

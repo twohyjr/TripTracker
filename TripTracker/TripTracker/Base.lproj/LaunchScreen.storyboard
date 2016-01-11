@@ -16,7 +16,49 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homepage" translatesAutoresizingMaskIntoConstraints="NO" id="rdc-cy-WXM">
+                                <rect key="frame" x="180" y="180" width="240" height="239"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="7Ox-9B-6Eb"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2etime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2P-VD-Piq">
+                                <rect key="frame" x="274" y="427" width="53" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="53" id="VIz-cq-OSa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Q0-sO-ROa">
+                                <rect key="frame" x="180" y="143" width="240" height="37"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="TripTracker">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="33" name="Papyrus"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.13830068964018238" green="0.66666666666666663" blue="0.38650834126804795" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="rdc-cy-WXM" firstAttribute="top" secondItem="6Q0-sO-ROa" secondAttribute="bottom" id="2QV-2l-cER"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="a2P-VD-Piq" secondAttribute="bottom" constant="152" id="EyI-c8-d2D"/>
+                            <constraint firstItem="rdc-cy-WXM" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="F7E-pu-QtB"/>
+                            <constraint firstItem="6Q0-sO-ROa" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="123" id="G43-0C-ydF"/>
+                            <constraint firstItem="6Q0-sO-ROa" firstAttribute="trailing" secondItem="rdc-cy-WXM" secondAttribute="trailing" id="Tjw-n6-abC"/>
+                            <constraint firstItem="a2P-VD-Piq" firstAttribute="top" secondItem="rdc-cy-WXM" secondAttribute="bottom" constant="8" symbolic="YES" id="Xh4-Fc-Uer"/>
+                            <constraint firstItem="a2P-VD-Piq" firstAttribute="centerX" secondItem="rdc-cy-WXM" secondAttribute="centerX" id="bMo-f9-hzh"/>
+                            <constraint firstItem="rdc-cy-WXM" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="fvZ-Jp-UWh"/>
+                            <constraint firstItem="rdc-cy-WXM" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="160" id="pMf-KU-9fn"/>
+                            <constraint firstItem="6Q0-sO-ROa" firstAttribute="leading" secondItem="rdc-cy-WXM" secondAttribute="leading" id="t6b-yh-YLl"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +66,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="homepage" width="300" height="300"/>
+    </resources>
 </document>
